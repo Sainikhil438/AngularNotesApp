@@ -1,0 +1,78 @@
+.note-card{
+    width: 35vw;
+    height: 25vh;
+    // border: 1px solid lightgray;
+   // border-radius: 1vh;
+}
+.note-card:hover{
+    box-shadow: 0.25px 0.25px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+.sn-div{
+    display: flex;
+    flex-direction: column;
+    // align-items: end;
+    justify-content: space-between;
+    height: 25vh;
+}
+.sn-div-1{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sn-div-2{
+    width: 95%;
+    height: 33%;
+    display: flex;
+    justify-content: end;
+}
+.sn-div-3{
+    width: 95%;
+    height: 33%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-btn{
+    width: 2.5vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-img{
+    width: 1.5vw;
+}
+.db-notesdiv-3-2{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 35%;
+    height: 8vh;
+}
+.db-input-1{
+    border: none;
+    height: 5vh;
+    width: 30vw;
+}
+.db-input-2{
+    border: none;
+    height: 5vh;
+    width: 98%;
+}
+.db-input-1:focus,.db-input-2:focus {
+    border: none;
+    outline: none;
+}
+@media screen and (max-width: 360px) {
+    .icon-btn, .en-pin{
+        display: none;
+    }
+    .sn-div-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

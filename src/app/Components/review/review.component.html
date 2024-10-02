@@ -1,0 +1,71 @@
+<div class="rv-outerdiv">
+    <div class="rv-innerdiv">
+        <form class="rv-innerdiv-1">
+            <h1>Registration Form</h1>
+
+            <div class="rv-div-1">
+                <div class="rv-div-1-1">
+                    <label for="input1">FirstName</label>
+                    <mat-form-field>
+                      <input matInput id="input1">
+                    </mat-form-field>
+                </div>
+                <div class="rv-div-1-2">
+                    <label for="input2">LastName</label>
+                    <mat-form-field>
+                      <input matInput id="input2">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="rv-div-1">
+                <div class="rv-div-1-1">
+                    <label for="input3">Bithday</label>
+                    <mat-form-field style="width: 15vw;">
+                        <mat-label>Date of Birth</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="rv-div-1-2">
+                    <label for="input4">Gender</label>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="rv-div-1">
+                <div class="rv-div-1-1">
+                    <label for="input5">Email</label>
+                    <mat-form-field>
+                      <input matInput id="input5">
+                    </mat-form-field>
+                </div>
+                <div class="rv-div-1-2">
+                    <label for="input6">Phone Number</label>
+                    <mat-form-field>
+                      <input matInput id="input6">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="rv-div-2">
+                <label for="input7">Subject</label>
+                <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <button mat-flat-button color="primary" style="width: 10vw;">Submit</button>
+        </form>
+    </div>
+</div>

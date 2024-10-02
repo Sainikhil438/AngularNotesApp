@@ -1,0 +1,83 @@
+<div class="db-con-div-1">
+
+    <button mat-icon-button class="db-extra" (click)="enableNotes()">
+        <img src="../../../assets/add_circle_icon.svg" alt="addCircle">
+    </button>
+
+    <mat-accordion *ngIf="condition; then thenBlock else elseBlock"></mat-accordion>
+
+    <ng-template #thenBlock>
+        <mat-expansion-panel hideToggle (click)="showAccordion()" class="db-note-1">
+            <mat-expansion-panel-header class="db-note-1-1">
+                <mat-panel-title style="color: gray;">
+                    Take a note...
+                </mat-panel-title>
+                
+                <div>
+                    <button mat-icon-button>
+                        <img src="../../../assets/checkbox_icon.svg" alt="checkbox">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/paintbrush_icon.svg" alt="paintbrush">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/picture_icon.svg" alt="picture">
+                    </button>
+                </div>
+            </mat-expansion-panel-header>
+            
+        </mat-expansion-panel>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <mat-expansion-panel hideToggle expanded class="db-note-2">
+           <form [formGroup]="notemaking" (ngSubmit)="SubmitNote()">
+            <div class="db-notesdiv-1">
+                <div class="note-div-1">
+                    <input type="text" class="db-input-1" placeholder="Title" formControlName="title">
+                </div>
+                <div>
+                    <button mat-icon-button>
+                        <img src="../../../assets/pin_icon.svg" alt="pin">
+                    </button>
+                </div>
+            </div>
+            <div class="db-notesdiv-2">
+                <input type="description" class="db-input-2" placeholder="Take a note..." formControlName="takeNote">
+            </div>
+            <div class="db-notesdiv-3">
+                <div class="db-notesdiv-3-1">
+                    <button mat-icon-button>
+                        <img src="../../../assets/remind_icon.svg" alt="remindme">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/collaborator_icon.svg" alt="collaborator">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/picture_icon.svg" alt="picture">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/archive_icon.svg" alt="archive">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/more_icon.svg" alt="more">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/undo_icon.svg" alt="undo">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/redo_icon.svg" alt="redo">
+                    </button>
+                </div>
+                <div class="db-notesdiv-3-2">
+                    <button mat-button>Close</button>
+                </div>
+            </div>
+           </form>
+        </mat-expansion-panel>
+    </ng-template>              
+
+</div>

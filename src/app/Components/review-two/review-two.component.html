@@ -1,0 +1,24 @@
+<div class="rt-outcontainer">
+    <div class="rt-div1">
+        <form class="rt-form" [formGroup]="notesForm" (ngSubmit)="AddTask()">
+            <h2>Add Notes</h2>
+            <mat-form-field class="example-full-width" style="width: 20vw;">
+                <input matInput placeholder="Title" formControlName="Title">
+              </mat-form-field>
+            <mat-form-field class="example-full-width" style="width: 20vw;">
+                <input matInput placeholder="Add Notes" formControlName="Notes">
+              </mat-form-field>
+            <button mat-button color="primary" style="width: 15vw;">Add</button>
+        </form>
+    </div>
+    <div class="rt-div2">
+        <ul *ngFor="let data of NotesArray, let i = index" [ngClass]="{'checked-background': data.isChecked}">
+            <li class="li-part">
+                <input type="checkbox" (change)="TaskCheck(data, i)">
+                <span>{{data.Title}}</span>
+                <span>{{data.Notes}}</span>
+                <button (click)="Remove(i)">Remove</button>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="sn-div-3">
+                
+    <ng-container *ngIf="!note.isTrash && !note.isArchive">
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/remind_icon.svg" alt="remindme" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/collaborator_icon.svg" alt="collaborator" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn" [matMenuTriggerFor]="colorpalette">
+            <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions" class="icon-img">
+        </button>
+        <mat-menu #colorpalette="matMenu">
+            <button mat-menu-item (click)="SetColor(note.noteID, 'white')" value="White">White</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'lightgrey')" value="Lightgrey">Lightgrey</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'lightgreen')" value="Lightgreen">Lightgreen</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'yellow')" value="Yellow">Yellow</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'aqua')" value="Aqua">Aqua</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'gold')" value="Gold">Gold</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'purple')" value="Purple">Purple</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'bisque')" value="Bisque">Bisque</button>
+            <button mat-menu-item (click)="SetColor(note.noteID, 'orange')" value="Orange">Orange</button>
+        </mat-menu>
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/picture_icon.svg" alt="picture" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn" (click)="SetArchive(note.noteID)">
+            <img src="../../../assets/archive_icon.svg" alt="archive" class="icon-img">
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-btn">
+            <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="SetTrash(note.noteID)">Delete note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show checkboxes</button>
+            <button mat-menu-item>Copy to Google Docs</button>
+            <button mat-menu-item>Version history</button>
+        </mat-menu>
+    </ng-container>
+
+    <ng-container *ngIf="!note.isTrash && note.isArchive">
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/remind_icon.svg" alt="remindme" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/collaborator_icon.svg" alt="collaborator" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn">
+            <img src="../../../assets/picture_icon.svg" alt="picture" class="icon-img">
+        </button>
+        <button mat-icon-button class="icon-btn" (click)="SetUnarchive(note.noteID)">
+            <img src="../../../assets/unarchive_icon.svg" alt="unarchive" class="icon-img">
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-btn">
+            <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show checkboxes</button>
+            <button mat-menu-item>Copy to Google Docs</button>
+            <button mat-menu-item>Version history</button>
+        </mat-menu>
+    </ng-container>
+
+    <ng-container *ngIf="note.isTrash && !note.isArchive">
+        <div class="sn-div-opt">
+            <button mat-icon-button class="icon-btn" (click)="DeleteForever(note.noteID)">
+                <img src="../../../assets/delete_forever-icon.svg" alt="deleteforever" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn" (click)="Restore(note.noteID)">
+                <img src="../../../assets/restore_icon.svg" alt="restore" class="icon-img">
+            </button>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,138 @@
+.db-outer-container{
+    height: 100vh;
+    width: 100vw;
+}
+.db-navbar{
+    gap: 1vw;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    height: 12vh;
+}
+
+.db-div-1{ 
+    width: 70vw;
+    height: 7vh;
+    display: flex;
+   justify-content: center;
+}
+.db-search-input {
+    height: 8vh;
+    width: 50vw; 
+    background-color: hwb(0 90% 9%);
+    display: flex;
+    align-items: center;
+    border-radius: 1vh;
+}
+.db-input{
+    height: 5vh;
+    width: 42vw;
+    background-color: hwb(0 90% 9%);
+    border: none;
+}
+.db-input:focus{
+    border: none;
+    outline: none;
+}
+.db-div-2{
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+}
+.db-div-3{
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.db-img-1{
+    height: 5vh;
+    width: 2vw;
+}
+.db-list-1{
+    width: 20vw;
+    border-radius: 50px;
+}
+.db-list{
+    display: flex;
+    gap: 1vw;
+}
+
+// .db-con-div-1{
+//     width: 80vw;
+//     height: 27vh;
+//     display: flex;
+//     justify-content: center;
+//     background-color: aqua;
+// }
+// .db-note-1{
+//     height: 7vh;
+//     width: 55%;
+//     margin-top: 3vh;
+// }
+// .db-note-1-1{
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .db-note-2{
+//     height: 22vh;
+//     width: 55%;
+//     margin-top: 3vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+// .db-notesdiv-1{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+// .db-input-1{
+//     border: none;
+//     height: 5vh;
+//     width: 38vw;
+// }
+.db-input-2{
+    border: none;
+    height: 5vh;
+    width: 40vw;
+}
+// .note-div-1{
+//     width: 70%;
+//     background-color: aqua;
+//     height: 5vh;
+// }
+// .note-div-1-1{
+//     width: 80%;
+// }
+.db-notesdiv-2{
+    width: 100%;
+}
+.db-notesdiv-3{
+    display: flex;
+    background-color: aqua;
+    height: 7vh;
+}
+.db-notesdiv-3-2{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 30%;
+    height: 8vh;
+}
+
+//mediaquery part
+@media screen and (max-width: 360px){
+    .db-img-1{
+        display: none;
+    }
+    .db-heading{
+        display: none;
+    }
+    .db-rem{
+        display: none;
+    }
+    .db-list-1{
+        width: 45vw;
+    }  
+}

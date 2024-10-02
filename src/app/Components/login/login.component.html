@@ -1,0 +1,31 @@
+<div id="divOne">
+    <form [formGroup]="loginForm" (ngSubmit)="LoginSubmit()">
+      <div id="divTwo">
+        <img src="../../../assets/Google__G__logo.svg.png" alt="GoogleLogo" style="height: 9vh; width: 4vw;">
+        <h1 style="margin-top: 2vh;">Sign in</h1>
+        <p>Use your Google account</p>
+      </div>
+      <div id="divThree">
+        <mat-form-field appearance="outline">
+            <mat-label>Email or Phone</mat-label>
+            <input matInput placeholder="Email or Phone" formControlName="email">
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                Email Required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+              Password Required
+         </mat-error>
+      </mat-form-field>
+        <a mat-button color="primary" style="width: 14vw; border-radius: 4vh;" (click)="GoToForgotPassword()">Forgot password?</a>
+        <p style="margin-top: 4vh;">Not your computer? Use Guest mode to sign in privately.<span style="color: blue;">Learn more.</span></p>
+        <div id="divFour">
+            <a mat-button color="primary" style="border-radius: 4vh;" (click)="GoToRegister()">Create account</a>
+            <button mat-flat-button color="primary" style="border-radius: 4vh;">Next</button>
+        </div>
+      </div>
+    </form>
+</div>

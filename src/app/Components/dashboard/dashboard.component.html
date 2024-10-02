@@ -1,0 +1,82 @@
+<div class="db-outer-container">
+    <mat-toolbar style="height: 12vh;">
+        <mat-toolbar-row class="db-navbar">
+            <button mat-icon-button (click)="sidenav.toggle();">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img src="../../../assets/Google_Keep_icon.png" alt="GoogleKeep" class="db-img-1">
+            <h1 class="db-heading">Keep</h1>
+            <div class="db-div-1">
+                <div class="db-search-input">
+                    <button mat-icon-button class="db-rem">
+                        <img src="../../../assets/search_icon.svg" alt="SearchIcon">
+                    </button>
+                    <input type="text" placeholder="Search" class="db-input" (keyup)="search($event)">
+                    <button mat-icon-button class="db-rem">
+                        <img src="../../../assets/close_icon.svg" alt="CloseIcon">
+                    </button>
+                </div>
+            </div>
+            <div class="db-div-2">
+                <button mat-icon-button class="db-rem">
+                    <img src="../../../assets/refresh_icon.svg" alt="RefreshIcon" class="db-rem">
+                </button>
+                <button mat-icon-button>
+                    <img src="../../../assets/list_icon.svg" alt="ListIcon">
+                </button>
+                <button mat-icon-button class="db-rem">
+                    <img src="../../../assets/settings_icon.svg" alt="SettingsIcon" class="db-rem">
+                </button>
+            </div>
+            <div class="db-div-3">
+                <button mat-icon-button class="db-rem">
+                    <img src="../../../assets/apps_icon.svg" alt="AppsIcon">
+                </button>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <img src="../../../assets/profile_icon.svg" alt="ProfileIcon">
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="LogOut()">Log out</button>
+                </mat-menu>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-sidenav-container style="background-color: white;">
+        <mat-sidenav #sidenav opened="true" mode="side" style="border: none;" class="db-sidenav">
+            <mat-nav-list>
+                <a mat-list-item class="db-list-1" routerLink="/dashboard/notecontainer">
+                    <div class="db-list">
+                        <img src="../../../assets/notes_icon.svg" alt="notesicon"> Notes
+                    </div>
+                </a>
+                <a mat-list-item class="db-list-1">
+                    <div class="db-list">
+                        <img src="../../../assets/notifications_icon.svg" alt="notificationsicon"> Remainders
+                    </div>
+                </a>
+                <a mat-list-item class="db-list-1">
+                    <div class="db-list">
+                        <img src="../../../assets/edit_icon.svg" alt="editicon"> Edit labels
+                    </div>
+                </a>
+                <a mat-list-item class="db-list-1" routerLink="/dashboard/archivenotes">
+                    <div class="db-list">
+                        <img src="../../../assets/archive_icon2.svg" alt="archiveicon"> Archive
+                    </div>
+                </a>
+                <a mat-list-item class="db-list-1" routerLink="/dashboard/trashnotes">
+                    <div class="db-list">
+                        <img src="../../../assets/delete_icon.svg" alt="deleteicon"> Trash
+                    </div>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="height: 88vh;">
+                 <!-- <app-notes-container></app-notes-container> -->
+                 
+                  <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

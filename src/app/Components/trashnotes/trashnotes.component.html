@@ -1,0 +1,22 @@
+<app-displaynotes [notesList]="trashNotes" (refreshArchiveRefresh2)="refreshTrashNotes($event)"></app-displaynotes>
+<!-- <div class="tn-outercontainer">
+    <mat-card *ngFor="let note of trashNotes, let i = index" class="tc-note-card" [ngStyle]="{backgroundColor: note.colour ? note.colour : 'white'}">
+        <div class="tn-div">
+            <div class="tn-div-1">
+                <b>{{note.title}}</b>
+            </div>
+            <div class="tn-div-2">
+                <p>{{note.takeNote}}</p>
+            </div>
+            <div class="tn-div-3">
+                <button mat-icon-button class="icon-btn" (click)="DeleteForever(note.noteID)">
+                    <img src="../../../assets/delete_forever-icon.svg" alt="deleteforever" class="icon-img">
+                </button>
+                <button mat-icon-button class="icon-btn" (click)="Restore(note.noteID)">
+                    <img src="../../../assets/restore_icon.svg" alt="restore" class="icon-img">
+                </button>
+                
+            </div>
+        </div>
+    </mat-card>
+</div> -->

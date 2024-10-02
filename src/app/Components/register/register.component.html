@@ -1,0 +1,34 @@
+<div class="rg-outerdiv">
+    <div class="rg-innerdiv">
+        <form class="rg-form" [formGroup]="registerForm" (ngSubmit)="RegisterSubmit()">
+            <img src="../../../assets/Google_logo.webp" alt="GoogleLogo" id="rg-img-1">
+            <h1>Create your Google Account</h1>
+            <div class="rg-detailsdiv">
+                <mat-form-field appearance="outline" class="rg-detailsdiv-1">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="First Name" formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="rg-detailsdiv-1">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Last Name" formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" type="email" formControlName="email">
+              </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="password">
+            </mat-form-field>
+            <div class="rg-btndiv">
+                <a mat-button color="primary">Sign in instead</a>
+                <button mat-flat-button color="primary" style="width: 7vw;" type="submit">Next</button>
+            </div>
+        </form>
+        <div class="rg-imgdiv">
+            <img src="../../../assets/register_img.png" alt="registerImage" id="rg-img-2">
+            <div class="rg-detailsdiv-2">One Account. All of Google working for you.</div>
+        </div>
+    </div>
+</div>

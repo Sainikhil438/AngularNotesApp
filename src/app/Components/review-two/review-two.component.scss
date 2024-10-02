@@ -1,0 +1,32 @@
+.rt-outcontainer{
+    height: 100vh;
+    width: 100vw;
+}
+.rt-div1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+.rt-form{
+    border: 1px solid black;
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rt-div2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.li-part{
+    display: flex;
+    gap:1vh;
+}
+.checked-background {
+    background-color: #ffcc00;
+  }

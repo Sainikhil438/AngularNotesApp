@@ -1,0 +1,61 @@
+<div class="dn-outercontainer">
+    <!-- <app-singlenote></app-singlenote> -->
+    <mat-card *ngFor="let note of notesList | filter : filterNote" class="note-card" [ngStyle]="{backgroundColor: note.colour ? note.colour : 'white'}">
+        <div class="sn-div">
+            <div class="sn-div-1" (click)="openDialog(note)">
+                <b>{{note.title}}</b>
+                <button mat-icon-button class="dn-icons-app">
+                    <img src="../../../assets/pin_icon.svg" alt="pin">
+                </button>
+            </div>
+            <div class="sn-div-2" (click)="openDialog(note)">
+                <p class="para-size">{{note.takeNote}}</p>
+            </div>
+            <app-icon-buttons [note]="note" (refreshEventArchive)="refreshArchiveRefresh($event)" class="dn-icons-app"></app-icon-buttons>
+            <!-- <div class="sn-div-3">
+                
+                <button mat-icon-button class="icon-btn">
+                    <img src="../../../assets/remind_icon.svg" alt="remindme" class="icon-img">
+                </button>
+                <button mat-icon-button class="icon-btn">
+                    <img src="../../../assets/collaborator_icon.svg" alt="collaborator" class="icon-img">
+                </button>
+                <button mat-icon-button class="icon-btn" [matMenuTriggerFor]="colorpalette">
+                    <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions" class="icon-img">
+                </button>
+                <mat-menu #colorpalette="matMenu">
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'white')" value="White">White</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'lightgrey')" value="Lightgrey">Lightgrey</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'lightgreen')" value="Lightgreen">Lightgreen</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'yellow')" value="Yellow">Yellow</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'aqua')" value="Aqua">Aqua</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'gold')" value="Gold">Gold</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'purple')" value="Purple">Purple</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'bisque')" value="Bisque">Bisque</button>
+                    <button mat-menu-item (click)="SetColor(note.noteID, 'orange')" value="Orange">Orange</button>
+                </mat-menu>
+                <button mat-icon-button class="icon-btn">
+                    <img src="../../../assets/picture_icon.svg" alt="picture" class="icon-img">
+                </button>
+                <button mat-icon-button class="icon-btn" (click)="SetArchive(note.noteID)">
+                    <img src="../../../assets/archive_icon.svg" alt="archive" class="icon-img">
+                </button>
+                <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-btn">
+                    <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="SetTrash(note.noteID)">Delete note</button>
+                    <button mat-menu-item>Add label</button>
+                    <button mat-menu-item>Add drawing</button>
+                    <button mat-menu-item>Make a copy</button>
+                    <button mat-menu-item>Show checkboxes</button>
+                    <button mat-menu-item>Copy to Google Docs</button>
+                    <button mat-menu-item>Version history</button>
+                </mat-menu>
+            </div> -->
+        </div>
+    </mat-card>
+
+
+
+</div>

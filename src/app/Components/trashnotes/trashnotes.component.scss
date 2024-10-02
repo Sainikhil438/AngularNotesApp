@@ -1,0 +1,48 @@
+.tn-outercontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tc-note-card{
+    margin: 10px;
+    width: 18vw;
+    border: 1px solid lightgray;
+    border-radius: 1vh;
+    box-shadow: none;
+}
+.tc-note-card:hover{
+    box-shadow: 0.25px 0.25px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+.tn-div{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.tn-div-1{
+    width: 95%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.tn-div-2{
+    width: 95%;
+    display: flex;
+    // background-color: aqua;
+}
+.tn-div-3{
+    width: 95%;
+    display: flex;
+    // justify-content: space-between;
+    // background-color: aqua;
+}
+.icon-btn{
+    width: 2.5vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-img{
+    width: 1.5vw;
+}

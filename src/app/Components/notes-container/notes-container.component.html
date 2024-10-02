@@ -1,0 +1,5 @@
+<div class="nc-outercontainer">
+    <app-takenotes (refreshAddNoteEvent)="addNoteEvent($event)"></app-takenotes>
+    <app-displaynotes (refreshArchiveRefresh2)="refreshDataList($event)" (refreshArchiveEvent)="archiveEvent($event)" [notesList]="notesArray"></app-displaynotes>
+</div>
+

@@ -1,0 +1,64 @@
+.dn-outercontainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.note-card{
+    margin: 10px;
+    width: 18vw;
+    border: 1px solid lightgray;
+    border-radius: 1vh;
+    box-shadow: none;
+}
+.note-card:hover{
+    box-shadow: 0.25px 0.25px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+.sn-div{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.sn-div-1{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.sn-div-2{
+    width: 95%;
+    display: flex;
+    // background-color: aqua;
+}
+.para-size{
+    width: 15vw;
+}
+// .sn-div-3{
+//     width: 95%;
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .icon-btn{
+//     width: 2.5vw;
+//     height: 5vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+// .icon-img{
+//     width: 1.5vw;
+// }
+
+//mediaquery part
+@media screen and (max-width: 360px){
+    .note-card{
+        width: 40vw;
+    }
+    .dn-icons-app{
+        display: none;
+    }
+    
+    // .sn-div{
+    //     width: 10vw;
+    //     background-color: aqua;
+    // }
+}

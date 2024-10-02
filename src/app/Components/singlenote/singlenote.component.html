@@ -1,0 +1,45 @@
+<mat-card class="note-card">
+    <div class="sn-div">
+        <div class="sn-div-1">
+            <b>Sai</b>
+            <button mat-icon-button>
+                <img src="../../../assets/pin_icon.svg" alt="pin">
+            </button>
+        </div>
+        <div class="sn-div-2">
+            <p>This is angular</p>
+        </div>
+        <div class="sn-div-3">
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/remind_icon.svg" alt="remindme" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/collaborator_icon.svg" alt="collaborator" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/picture_icon.svg" alt="picture" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/archive_icon.svg" alt="archive" class="icon-img">
+            </button>
+            <!-- <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+            </button> -->
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-btn">
+                <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Delete note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>Copy to Google Docs</button>
+                <button mat-menu-item>Version history</button>
+            </mat-menu>
+        </div>
+    </div>
+</mat-card>

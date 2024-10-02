@@ -1,0 +1,57 @@
+<mat-card  class="note-card" [ngStyle]="{backgroundColor: color ? color : 'white'}">
+    <div class="sn-div">
+        <div class="sn-div-1">
+            <div class="note-div-1">
+                <input type="text" class="db-input-1" placeholder="Title" [(ngModel)]="title" style="font-size: medium;" [ngStyle]="{backgroundColor: color ? color : 'white'}">
+            </div>
+            <div>
+                <button mat-icon-button class="en-pin">
+                    <img src="../../../assets/pin_icon.svg" alt="pin">
+                </button>
+            </div>
+        </div>
+        <div class="sn-div-2">
+            <input type="textarea" class="db-input-2" placeholder="Take a note..." [(ngModel)]="takeNote" [ngStyle]="{backgroundColor: color ? color : 'white'}">
+        </div>
+        <div class="sn-div-3">
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/remind_icon.svg" alt="remindme" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/collaborator_icon.svg" alt="collaborator" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/backgroundoptions_icon.svg" alt="backgroundoptions" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/picture_icon.svg" alt="picture" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/archive_icon.svg" alt="archive" class="icon-img">
+            </button>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="icon-btn">
+                <img src="../../../assets/more_icon.svg" alt="more" class="icon-img">
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Delete note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>Copy to Google Docs</button>
+                <button mat-menu-item>Version history</button>
+            </mat-menu>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/undo_icon.svg" alt="undo" class="icon-img">
+            </button>
+            <button mat-icon-button class="icon-btn">
+                <img src="../../../assets/redo_icon.svg" alt="redo" class="icon-img">
+            </button>
+            <div class="db-notesdiv-3-2">
+                <mat-dialog-actions>
+                    <button mat-button (click)="closeDialog()">Close</button>
+                </mat-dialog-actions>
+            </div>
+        </div>
+    </div>
+</mat-card> 
